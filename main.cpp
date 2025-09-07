@@ -1,7 +1,6 @@
 #include <iostream>
 #include <search.h>
 #include <vector>
-#include <ctype>
 #include <string>
 
 using namespace std;
