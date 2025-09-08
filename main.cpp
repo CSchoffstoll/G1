@@ -59,6 +59,7 @@ int main() {
 		choice = tolower(choice); //to remove capitalization errors
 
 
+
 	} while (choice != q);
 
 	return 0;
