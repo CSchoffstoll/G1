@@ -20,7 +20,9 @@ int linearSearch(const std::vector<std::string>& list, const std::string& key){
 	
 	//Loop through vector for key (basic vector search from notes)
 	for (std:: size_t i = 0; i <list.size(); i++){
-		if(toLowerCase(list[i]) == lowerKey){
+		std::string title = toLowerCase(list[i]); 
+		
+		if(title.find(lowerKey) != std::string::npos){
 			return static_cast<int>(i);
 		}
 	} return -1; //returns -1 if the value is not present
