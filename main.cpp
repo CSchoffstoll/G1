@@ -43,4 +43,4 @@ int main() {
 
 		for (size_t i = 0; i < book_list.size(); i++) {
 
-	} while (choice != q);
+	} while (choice != 'q');
