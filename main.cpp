@@ -45,7 +45,7 @@ int main() {
 
 		int index = -1; //stores index of matched keywords, -1 as default for if statement logic
 
-		index = searchLinear(book_list, search); //function call to search matching keywords
+		index = linearSearch(book_list, search); //function call to search matching keywords
 
 		if (index != -1) //logic where title of first matched book gets printed along with it's index
 			cout << "FOUND: "<< book_list[index] << " Index = " << index << "\n\n\n";
