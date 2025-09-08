@@ -1,3 +1,11 @@
+/*
+CS1B - G1: Linear Search
+Christian Schoffstoll (1276371) - role: driver
+Sophia Omar (1324715) - role: function
+Date: 2025-09-07
+Purpose: Case‑insensitive substring linear search over book titles.
+Build:   g++ -std=c++20 main.cpp search.cpp -o search
+*/
 #include <iostream>
 #include <search.h>
 #include <vector>
