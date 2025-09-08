@@ -2,11 +2,12 @@
 #include <search.h>
 #include <vector>
 #include <string>
+#include <cctype>
 
 using namespace std;
 
 int main() {
-	char choice ='';  //user entered decision -> while loop
+	char choice = '';  //user entered decision -> while loop
 	//vector containing all books in database for assignment
 	vector<string> book_list = {"Star Wars", "The Empire Strikes Back (Star Wars)"
 										 "Splinter of the Mind's Eye (Star Wars", "Return of the Jedi (Star Wars)",
@@ -34,13 +35,31 @@ int main() {
 	choice = tolower(choice); //prevents capitalization errors
 
 	do {
+
 		string search = ""; //user entered keyword to search for results
 
 		cout << "Search: "; //prompts user to input their search
 
-		cin.ignore(); //clears buffer for user to enter multiple words
+		cin.ignore(); //clears buffer for user to enter multiple keywords
 		getline(cin, search); //accepts users search
 
-		for (size_t i = 0; i < book_list.size(); i++) {
+		int index = -1; //stores index of matched keywords, -1 as default for if statement logic
+
+		index = searchLinear(book_list, search); //function call to search matching keywords
+
+		if (index != -1) //logic where title of first matched book gets printed along with it's index
+			cout << "FOUND: "<< book_list[index] << " Index = " << index << "\n\n\n";
+
+		else //prints that the user's keyword could not be found
+			cout << search << " was not found!\n\n\n";
+
+		cout << "Choice: "; //prompts user to make another choice like just before the do while
+		cin >> choice;
+
+		choice = tolower(choice); //to remove capitalization errors
+
 
 	} while (choice != q);
+
+	return 0;
+}
