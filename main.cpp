@@ -7,7 +7,7 @@
 using namespace std;
 
 int main() {
-	char choice = '';  //user entered decision -> while loop
+	char choice;  //user entered decision -> while loop
 	//vector containing all books in database for assignment
 	vector<string> book_list = {"Star Wars", "The Empire Strikes Back (Star Wars)"
 										 "Splinter of the Mind's Eye (Star Wars", "Return of the Jedi (Star Wars)",
@@ -60,7 +60,7 @@ int main() {
 
 
 
-	} while (choice != q);
+	} while (choice != 'q');
 
 	return 0;
 }
